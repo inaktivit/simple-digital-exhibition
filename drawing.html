@@ -12,54 +12,68 @@
             background-color: #f0f0f0;
             color: #333;
         }
+
         header {
             background-color: #99a3aa;
             color: white;
             padding: 20px 0;
             text-align: center;
         }
+
         main {
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
             background-color: #fff;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            flex: 1; 
         }
+
         .drawings {
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
         }
+
         .drawing {
             margin: 10px;
             flex: 1 1 45%;
             max-width: 45%;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             background-color: white;
             padding: 10px;
             transition: transform 0.2s;
+            overflow: hidden; /* Ensures content doesn't overflow */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center align items horizontally */
         }
+
         .drawing img {
-            width: 100%;
-            height: auto;
+            width: 100%;       /* Fit the image to the width of the container */
+            height: auto;      /* Maintain the aspect ratio */
+            max-height: 300px; /* Set a maximum height to maintain uniformity */
+            object-fit: cover; /* Crop the image to cover the container */
         }
+
         .drawing:hover {
-            transform: scale(1.1);
+            transform: scale(1.1); /* Slightly scale up the image on hover */
         }
+
         .drawing p {
             margin: 10px 0;
             text-align: center;
             color: #555;
         }
+
         footer {
             text-align: center;
             padding: 20px 0;
             background-color: #82969c;
             color: white;
             width: 100%;
-            margin-top: auto; 
+            margin-top: auto;
         }
+
         a {
             color: #fff;
             text-decoration: none;
@@ -72,7 +86,7 @@
     </header>
     <main>
         <h2>Explore My Drawings</h2>
-            <div class="drawings">
+        <div class="drawings">
             <div class="drawing">
                 <img src="images/basalt.jpg" alt="Drawing example 1">
                 <p>"basalt study"</p>
@@ -99,9 +113,9 @@
             </div>
         </div>
     </main>
-<footer>
+    <footer>
         <p><a href="index.html">Return to Main Page</a></p>
-</footer>
+    </footer>
 </body>
-
 </html>
+
